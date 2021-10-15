@@ -77,11 +77,20 @@ public class Robot extends TimedRobot {
     if (m_autonomousCommand != null) {
       m_autonomousCommand.cancel();
     }
+    if(1/RobotContainer.getProximityOne().getVoltage() * 6.1111126 * 1/2.54 < 4) {
+      //under 3 inches
+      RobotContainer.getTransport().moveTransport(Constants.TRANSPORT_TELEOP_SPEED);
+    }
   }
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+    if(1/RobotContainer.getProximityOne().getVoltage() * 6.1111126 * 1/2.54 < 4) {
+      //under 3 inches
+      RobotContainer.getTransport().moveTransport(Constants.TRANSPORT_TELEOP_SPEED);
+    }
+  }
 
   @Override
   public void testInit() {
