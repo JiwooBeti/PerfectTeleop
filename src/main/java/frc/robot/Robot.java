@@ -80,6 +80,8 @@ public class Robot extends TimedRobot {
     if(1/RobotContainer.getProximityOne().getVoltage() * 6.1111126 * 1/2.54 < 4) {
       //under 3 inches
       RobotContainer.getTransport().moveTransport(Constants.TRANSPORT_TELEOP_SPEED);
+    } else {
+      RobotContainer.getTransport().stopTransport();
     }
   }
 
@@ -89,6 +91,8 @@ public class Robot extends TimedRobot {
     if(1/RobotContainer.getProximityOne().getVoltage() * 6.1111126 * 1/2.54 < 4) {
       //under 3 inches
       RobotContainer.getTransport().moveTransport(Constants.TRANSPORT_TELEOP_SPEED);
+    } else {
+      RobotContainer.getTransport().stopTransport();
     }
   }
 

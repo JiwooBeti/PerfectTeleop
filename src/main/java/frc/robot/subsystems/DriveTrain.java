@@ -21,7 +21,7 @@ public class DriveTrain  extends SubsystemBase {
    }
 
    public void takeJoystickInputs(Joystick joy) {
-       drive.arcadeDrive(joy.getY(), joy.getZ());
+       drive.arcadeDrive(joy.getY(), -1 * joy.getZ());
    }
 
    public void moveTankDrive(double leftSpeed, double rightSpeed) {
