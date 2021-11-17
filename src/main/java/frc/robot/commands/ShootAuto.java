@@ -35,7 +35,8 @@ public class ShootAuto extends CommandBase {
 
         public boolean isFinished() {
 
-            return false;
+            //return false;
+            return !RobotContainer.getJoyStick().getRawButton(4);
             //most likely wrong
             
 
